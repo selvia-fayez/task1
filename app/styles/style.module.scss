@@ -1,0 +1,141 @@
+@import './variables.module.scss';
+
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    h3{
+        text-align: center;
+        margin-top: 20px;
+        color: $color-menu;
+    }
+ .post{
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $color-gray;
+    .userInfo{
+        width: 100%;
+        color: $color-primary;
+        @include my-flex(flex, "", center);
+        // display: flex;
+        // align-items: center;
+        img{
+            width: 30px;
+            margin: 10px;
+        }
+    }
+    .postInfo{
+        position: relative;
+        img{
+            width: 100%;   
+            height: 300px;
+        }
+        i{
+            position: absolute;
+            right: 0;
+            margin-right: 10px;
+            margin-top: 1%;
+            font-size: map-get($map: $font-size, $key: lg);
+            color: red;
+        }
+        i:hover {
+            color: $color-ihover;
+            transition: all ease 0.5s;
+    
+        }    
+        p{
+            margin-left: 10px;        
+            color: $color-primary;
+            font-size: map-get($map: $font-size, $key: sm);
+        }
+        .likes{
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .caption{
+            color: rgb(100, 100, 100);
+            margin-top: 10px;
+        }
+        .comments{
+            color: $color-gray;
+            margin-top: 10px;
+        }
+    }
+ }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: $color-menu;
+    width: 100%;
+    height: 40px;
+    @include my-flex(flex, space-around, center);
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: map-get($map: $font-size, $key: lg);
+    }
+    a:hover{
+        color: $color-ihover;
+        transition: all ease 0.5s;
+    }
+}
+.navbar {
+    background-color: $color-menu;
+    width: 100%;
+    height: 40px;
+    @include my-flex(none, "", center);
+    // display: none;
+    // align-items: center;
+    .title{
+        font-size: map-get($map: $font-size, $key: md);
+        color: white;
+        font-weight: bold;
+        margin-left: 5%;
+    }
+    div{
+        margin-left: auto;
+        margin-right: 5%;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: map-get($map: $font-size, $key: sm);
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    a:hover {
+        color: rgb(253, 192, 192);
+        transition: all ease 0.5s;
+    }
+}
+
+@media (min-width:800px) {
+    .container{
+        width: 75%;
+    }
+    .footer{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+    }
+}
+@media (min-width:1024px) {
+    .container {
+        width: 50%;
+    }
+    .footer {
+        display: none;
+    }
+    .navbar {
+        display: flex;
+    }
+}

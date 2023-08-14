@@ -1,0 +1,17 @@
+$color-primary: #9900ff;
+$color-menu : #ff285e;
+$color-ihover: #ff5f5f;
+$color-gray: #acacac;
+
+$font-size: (
+    "sm":14px,
+    "md":20px,
+    "lg":25px,
+);
+@mixin my-flex($dis: "flex", $justfiy, $items) {
+    display: $dis;
+    justify-content: $justfiy;
+    align-items: $items;
+}
+
+
